@@ -1,5 +1,6 @@
 from typing import List
 from costack_temporal_sdk.context.function_context import FunctionContext
+import pprint
 
 class RuntimeContext:
     def __init__(self, debug):
@@ -7,6 +8,14 @@ class RuntimeContext:
         self._entry_context = dict()
         self._exit_context = dict()
         self._steps: List[FunctionContext] = []
+    
+    def __repr__(self):
+        return pprint.pformat({
+            "debug": self.debug,
+            "entry_context": self.entry_context,
+            "exit_context": self.exit_context,
+            "steps": self.steps
+        })
 
     @property
     def debug(self):
