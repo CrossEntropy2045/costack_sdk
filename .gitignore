@@ -2,3 +2,6 @@ venv/
 entropy-env/
 *.pyc
 __pycache__
+
+
+dist/*
