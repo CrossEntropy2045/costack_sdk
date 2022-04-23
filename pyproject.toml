@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "costack_sdk"
-version = "0.1.2"
+version = "0.1.3"
 description = "the sdk to support lambda workflows and seamless integrations"
 authors = ["perseus.yang <ry82@cornell.edu>"]
 

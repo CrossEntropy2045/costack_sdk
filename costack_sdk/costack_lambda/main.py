@@ -34,7 +34,6 @@ class CostackRequest:
 
     def build_from_event(self, event):
         # parse the input event 
-        event = event['event']
         http = event['requestContext']['http']
         self._http_method = http['method']
         self._header = event['headers']
