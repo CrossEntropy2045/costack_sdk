@@ -8,7 +8,7 @@ class CostackRequest:
         self._body = None 
         self._is_base64_encoded = None 
         self._route_path = None 
-        
+        self._params = None 
         # build from the event input 
         self.build_from_event(event)
 
@@ -32,6 +32,10 @@ class CostackRequest:
     def route_path(self):
         return self._route_path
 
+    @property
+    def params(self):
+        return self._params
+
     def build_from_event(self, event):
         # parse the input event 
         http = event['requestContext']['http']
@@ -39,6 +43,8 @@ class CostackRequest:
         self._header = event['headers']
         self._is_base64_encoded = event['isBase64Encoded']
         self._route_path = event["routeKey"].split()[1]
+        # optional params
+        self._params = event.get("queryStringParameters", None)
         if self._http_method.lower() == "get":
             # do nothing 
             pass 
