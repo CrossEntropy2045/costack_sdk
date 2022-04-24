@@ -1,8 +1,8 @@
 import traceback
 import time
 import config
-from costack_temporal_sdk.context.function_context import FunctionContext
-from costack_temporal_sdk.context.runtime_context import RuntimeContext
+from costack_sdk.costack_workflow.context.function_context import FunctionContext
+from costack_sdk.costack_workflow.context.runtime_context import RuntimeContext
 
 def step(function, *args, **kwargs):
     # global RUNTIME_CONTEXT

@@ -1,7 +1,7 @@
 import config
 import os 
-from costack_temporal_sdk.constants import DEBUG_ENVIRON_KEY, LAMBDA_EVENT_KEY, LAMBDA_CONTEXT_KEY, LAMBDA_RETURN_KEY
-from costack_temporal_sdk.context.runtime_context import RuntimeContext
+from costack_sdk.costack_workflow.constants import DEBUG_ENVIRON_KEY, LAMBDA_EVENT_KEY, LAMBDA_CONTEXT_KEY, LAMBDA_RETURN_KEY
+from costack_sdk.costack_workflow.context.runtime_context import RuntimeContext
 
 def lambda_runtime(handler):
     config.runtime = RuntimeContext(os.environ.get(DEBUG_ENVIRON_KEY) == "True")
