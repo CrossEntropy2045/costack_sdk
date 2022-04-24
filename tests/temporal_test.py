@@ -1,6 +1,8 @@
 import config
-from costack_temporal_sdk.step import step
-from costack_temporal_sdk.lambda_runtime import lambda_runtime
+import sys 
+sys.path.insert(0,'..')
+from costack_sdk.costack_workflow.step import step
+from costack_sdk.costack_workflow.lambda_runtime import lambda_runtime
 import os
 
 def func(a, b, keykey=""):
